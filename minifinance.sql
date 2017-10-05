@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2017 at 11:44 PM
+-- Generation Time: Oct 05, 2017 at 11:51 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -112,17 +112,13 @@ CREATE TABLE `sales_details` (
   `sale_id` int(11) NOT NULL,
   `service_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `unit` varchar(20) NOT NULL,
-  `unit_price` decimal(10,0) NOT NULL,
-  `price_without_vat` decimal(10,0) NOT NULL,
-  `price_with_vat` decimal(10,0) NOT NULL,
-  `total_price` decimal(10,0) NOT NULL
+  `unit` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `services`
+-- Table structure for table    `services`
 --
 
 CREATE TABLE `services` (
