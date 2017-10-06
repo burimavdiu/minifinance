@@ -1,9 +1,8 @@
 <?php
 
-function addUser($firstname,$lastname,$email,$phone,$username,$password){
+function addUser($firstname,$lastname,$password,$email,$username,$phone){
 	global $dbconn;
-	$query_add_user="INSERT INTO users(firstname,lastname,email,phone,username,password)VALUES('$firstname','$lastname','$email',
-					'$phone','$username','$password')";
+	$query_add_user="INSERT INTO users(firstname,lastname,password,email,username,phone)VALUES('$firstname','$lastname','$password','$email','$username','$phone')";
 	$result_add_user=mysqli_query($dbconn, $query_add_user);
 	if(!$result_add_user){
 		die("Gabim gjat shtimit te kategoris" . mysqli_error($dbconn));
@@ -14,6 +13,12 @@ function findUsers(){
 	$query_users="SELECT * FROM users";
 	return $result_all_users=mysqli_query($dbconn,$query_users);
 }
+function findDepartments(){
+	global $dbconn;
+	$query_dep="SELECT dep_name FROM departments";
+	return $result_all_dep=mysqli_query($dbconn,$query_dep);
+}
+
 /*
 function findCategories(){
 	global $dbconn;

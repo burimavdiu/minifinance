@@ -1,8 +1,7 @@
 
 	<?php
 		if(isset($_POST['addUser'])){
-			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],$_POST['email'],
-			$_POST['phone'],$_POST['username'],$_POST['password']);
+			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],$_POST['password'],$_POST['email'],$_POST['username'],$_POST['phone']);
 			echo $mesazhi;
 		}
 		
@@ -23,9 +22,18 @@
               </div>
             </div>
           </div>
-        <div class="form-group">
+            <div class="form-group">
             <label for="department">Departamenti</label>
-            <input name="department" class="form-control" id="department" type="text" aria-describedby="departmentlHelp" >
+            <?php
+                echo '<select name="department" class="form-control"  id="department">';
+				$departments=findDepartments();
+				
+                while($dep=mysqli_fetch_array($departments)){
+                    echo "<option value='".$dep['dep_id']."'> ". $dep['dep_name']. "</option>";
+
+                }
+                echo '</select>';
+            ?>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
@@ -51,10 +59,11 @@
               </div>
             </div>
             <div class="form-group">
-                <label for="department">Regjistruesi</label>
-                <input name="registrar" class="form-control" id="registrar" type="text" aria-describedby="registrarHelp" >
+                <label for="registrar">Regjistruesi</label>
+                <input name="registrar" class="form-control" id="registrar" type="text"  aria-describedby="registrarHelp" >
           </div>
           </div>
+            
 		  <input name="addUser" type="submit" class="btn btn-primary btn-block" value="Regjistro">
         </form>
       </div>
