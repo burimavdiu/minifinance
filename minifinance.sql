@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2017 at 11:51 PM
+-- Generation Time: Oct 06, 2017 at 04:51 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -118,7 +118,7 @@ CREATE TABLE `sales_details` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table    `services`
+-- Table structure for table `services`
 --
 
 CREATE TABLE `services` (
@@ -138,12 +138,14 @@ CREATE TABLE `services` (
 
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
-  `first_name` varchar(30) NOT NULL,
-  `last_name` varchar(30) NOT NULL,
+  `firstname` varchar(30) NOT NULL,
+  `lastname` varchar(30) NOT NULL,
   `password` varchar(100) NOT NULL,
   `dep_id` int(11) NOT NULL,
-  `user_email` varchar(40) NOT NULL,
-  `date` date NOT NULL
+  `email` varchar(40) NOT NULL,
+  `date` date NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `phone` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -232,7 +234,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --

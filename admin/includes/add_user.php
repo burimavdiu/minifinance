@@ -23,9 +23,9 @@
               </div>
             </div>
           </div>
-            <div class="form-group">
+        <div class="form-group">
             <label for="department">Departamenti</label>
-            <input name="department" class="form-control" id="department" type="text" aria-describedby="emailHelp" >
+            <input name="department" class="form-control" id="department" type="text" aria-describedby="departmentlHelp" >
           </div>
           <div class="form-group">
             <label for="email">Email</label>
@@ -50,6 +50,10 @@
                 <input class="form-control" id="confirmPassword" type="password">
               </div>
             </div>
+            <div class="form-group">
+                <label for="department">Regjistruesi</label>
+                <input name="registrar" class="form-control" id="registrar" type="text" aria-describedby="registrarHelp" >
+          </div>
           </div>
 		  <input name="addUser" type="submit" class="btn btn-primary btn-block" value="Regjistro">
         </form>
