@@ -1,10 +1,11 @@
+
 	<?php
 		if(isset($_POST['addUser'])){
 			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],$_POST['email'],
 			$_POST['phone'],$_POST['username'],$_POST['password']);
 			echo $mesazhi;
 		}
-	
+		
 	?>
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">Regjistrimi i Perdoruesit</div>
@@ -21,6 +22,10 @@
                 <input name="lastname" class="form-control" id="lastname" type="text" aria-describedby="nameHelp">
               </div>
             </div>
+          </div>
+            <div class="form-group">
+            <label for="department">Departamenti</label>
+            <input name="department" class="form-control" id="department" type="text" aria-describedby="emailHelp" >
           </div>
           <div class="form-group">
             <label for="email">Email</label>
