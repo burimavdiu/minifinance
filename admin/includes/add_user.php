@@ -62,14 +62,7 @@
                 <label for="registrar">Regjistruesi</label>
                 <input name="registrar" class="form-control" id="registrar" type="text"  aria-describedby="registrarHelp" >
           </div>
-          </div>
-       <!-- 
-	   
-	   
-	   
-	   
-	   
-	   -->     
+            </div> 
 		  <input name="addUser" type="submit" class="btn btn-primary btn-block" value="Regjistro">
         </form>
       </div>
