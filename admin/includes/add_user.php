@@ -9,8 +9,8 @@
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">Regjistrimi i Perdoruesit</div>
       <div class="card-body">
-        <form method="post">
-          <div class="form-group">
+        <form method="post">		  
+		  <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
                 <label for="firstname">Emri : </label>
@@ -63,7 +63,13 @@
                 <input name="registrar" class="form-control" id="registrar" type="text"  aria-describedby="registrarHelp" >
           </div>
           </div>
-            
+       <!-- 
+	   
+	   
+	   
+	   
+	   
+	   -->     
 		  <input name="addUser" type="submit" class="btn btn-primary btn-block" value="Regjistro">
         </form>
       </div>
