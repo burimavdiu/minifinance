@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2017 at 04:51 PM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Generation Time: Oct 09, 2017 at 03:05 PM
+-- Server version: 10.1.10-MariaDB
+-- PHP Version: 7.0.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -82,6 +80,13 @@ CREATE TABLE `departments` (
   `dep_name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `departments`
+--
+
+INSERT INTO `departments` (`dep_id`, `dep_name`) VALUES
+(1, 'I shitjeve');
+
 -- --------------------------------------------------------
 
 --
@@ -145,8 +150,17 @@ CREATE TABLE `users` (
   `email` varchar(40) NOT NULL,
   `date` date NOT NULL,
   `username` varchar(30) NOT NULL,
-  `phone` varchar(20) NOT NULL
+  `phone` varchar(20) NOT NULL,
+  `reg_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `firstname`, `lastname`, `password`, `dep_id`, `email`, `date`, `username`, `phone`, `reg_id`) VALUES
+(8, 'Florent', 'Imeri', '123', 1, 'florentimeri@gmail.com', '0000-00-00', 'florentimeri', '044/263-053', 1),
+(9, 'Edi', 'Gashi', '342`', 1, 'edi.gashi@yahoo.com', '0000-00-00', 'edigashi', '044/123-123', 1);
 
 --
 -- Indexes for dumped tables
@@ -219,7 +233,7 @@ ALTER TABLE `companies`
 -- AUTO_INCREMENT for table `departments`
 --
 ALTER TABLE `departments`
-  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `dep_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `sales`
 --
@@ -234,7 +248,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- Constraints for dumped tables
 --
@@ -278,7 +292,6 @@ ALTER TABLE `services`
 ALTER TABLE `users`
   ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`dep_id`) REFERENCES `departments` (`dep_id`),
   ADD CONSTRAINT `users_ibfk_2` FOREIGN KEY (`dep_id`) REFERENCES `departments` (`dep_id`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
