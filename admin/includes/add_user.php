@@ -56,7 +56,7 @@
                 <input class="form-control" id="confirmPassword" type="password">
               </div>
             </div>
-          </div> 
+            </div>
 		  <input name="addUser" type="submit" class="btn btn-primary btn-block" value="Regjistro">
         </form>
       </div>
