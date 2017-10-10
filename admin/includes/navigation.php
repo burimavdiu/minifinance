@@ -23,6 +23,20 @@
             <span class="nav-link-text">Tables</span>
           </a>
         </li>
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseUsers" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-users"></i>
+            <span class="nav-link-text">Përdoruesit</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseUsers">
+            <li>
+              <a href="users.php">Lista e përdoruesve</a>
+            </li>
+            <li>
+              <a href="users.php?source=add_user">Shto Përdorues</a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>

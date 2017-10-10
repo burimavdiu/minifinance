@@ -1,4 +1,25 @@
 <?php
+
+function addUser($firstname,$lastname,$dep_id,$password,$email,$username,$phone){
+	global $dbconn;
+	$query_add_user="INSERT INTO users(firstname,lastname,dep_id,password,email,username,phone,reg_id) VALUES('$firstname','$lastname', $dep_id,'$password','$email','$username','$phone', 1)";
+	$result_add_user=mysqli_query($dbconn, $query_add_user);
+	if(!$result_add_user){
+		die("Gabim gjat shtimit te perdoruesit" . mysqli_error($dbconn));
+	}	
+}
+function findUsers(){
+	global $dbconn;
+	$query_users="SELECT * FROM users";
+	return $result_all_users=mysqli_query($dbconn,$query_users);
+}
+function findDepartments(){
+	global $dbconn;
+	$query_dep="SELECT dep_id, dep_name FROM departments";
+	return $result_all_dep=mysqli_query($dbconn,$query_dep);
+}
+
+/*
 function findCategories(){
 	global $dbconn;
 	$query_categories="SELECT * FROM categories";
@@ -34,5 +55,5 @@ function updateCategory($cat_id,$cat_title){
 		die("Gabim gjat modifimit te kategoris" . mysqli_error($dbconn));	
 	}
 }
-
+*/
 ?>
