@@ -10,7 +10,7 @@ foreach($db as $key=>$value){
 
 $dbconn=mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 
-/*if($dbconn){
+if($dbconn){
 	echo "U lidhem me DB";
-}*/
+} else { echo "Nuk lidhem me DB"; }
 ?>
