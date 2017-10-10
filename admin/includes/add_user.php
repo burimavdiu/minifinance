@@ -56,15 +56,7 @@
                 <input class="form-control" id="confirmPassword" type="password">
               </div>
             </div>
-<<<<<<< HEAD
-            <div class="form-group">
-                <label for="registrar">Regjistruesi</label>
-                <input name="registrar" class="form-control" id="registrar" type="text"  aria-describedby="registrarHelp" >
-          </div>
-            </div> 
-=======
-          </div> 
->>>>>>> bc43e1fb92ab699669cc533463964e9eea8215bd
+            </div>
 		  <input name="addUser" type="submit" class="btn btn-primary btn-block" value="Regjistro">
         </form>
       </div>
