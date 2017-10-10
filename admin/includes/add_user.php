@@ -6,7 +6,7 @@
 		}
 	?>
     <div class="card card-register mx-auto mt-5">
-      <div class="card-header">Regjistrimi i Perdoruesit</div>
+      <div class="card-header">Regjistrimi i Përdoruesit</div>
       <div class="card-body">
         <form method="post">		  
 		  <div class="form-group">
@@ -42,17 +42,17 @@
             <input name="phone" class="form-control" id="phone" type="text" aria-describedby="telefoniHelp" >
           </div>
 		   <div class="form-group">
-            <label for="username">Perdoruesi</label>
+            <label for="username">Përdoruesi</label>
             <input name="username" class="form-control" id="username" type="text" aria-describedby="perdoruesiHelp" >
           </div>
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <label for="password">Fjalekalimi</label>
+                <label for="password">Fjalëkalimi</label>
                 <input name="password" class="form-control" id="password" type="password">
               </div>
               <div class="col-md-6">
-                <label for="confirmPassword">Konfirmo Fjalekalimin</label>
+                <label for="confirmPassword">Konfirmo Fjalëkalimin</label>
                 <input class="form-control" id="confirmPassword" type="password">
               </div>
             </div>

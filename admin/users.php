@@ -7,7 +7,7 @@
 		  <!-- Breadcrumbs-->
 		  <ol class="breadcrumb">
 			<li class="breadcrumb-item">
-			  <a href="#">Users</a>
+			  <a href="./users.php">Users</a>
 			</li>
 			<li class="breadcrumb-item active">My Dashboard</li>
 		  </ol>
@@ -29,11 +29,10 @@
 				break;
 				
 				default:
-				//echo "test";
 				include "includes/view_all_users.php";
 				break;
-			}
-			?>	
+			 }
+			?>
 			
 		</div>
 		 <!-- /.container-fluid-->

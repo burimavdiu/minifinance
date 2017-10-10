@@ -13,6 +13,11 @@ function findUsers(){
 	$query_users="SELECT * FROM users";
 	return $result_all_users=mysqli_query($dbconn,$query_users);
 }
+function findClients(){
+	global $dbconn;
+	$query_clients="SELECT * FROM clients";
+	return $result_all_clients=mysqli_query($dbconn,$query_clients);
+}
 function findDepartments(){
 	global $dbconn;
 	$query_dep="SELECT dep_id, dep_name FROM departments";

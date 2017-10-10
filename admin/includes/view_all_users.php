@@ -32,7 +32,7 @@
               <?php
 				$users=findUsers();
 				while($user=mysqli_fetch_array($users)){
-				$user_id=$user['userid'];
+				$user_id=$user['user_id'];
 				echo "<tr>";
 				
 				echo "<td>".  $user['firstname'] . "</td>";
