@@ -1,13 +1,15 @@
 
 	<?php
 		if(isset($_POST['addClient'])){
-			$mesazhi=addClient($_POST['client'],$_POST['contactPerson'],$_POST['position'],$_POST['firstAddress'],$_POST['secondAddress'],$_POST['city'],$_POST['state'],$_POST['zip'],$_POST['phone'],$_POST['mobPhone'],$_POST['email'],$_POST['web'],$_POST['clientRegistrationNo'],$_POST['fiscalNo'],$_POST['vatNo'],$_POST['clientType'],8,$_POST['date']);// vlera 1 e duhet te zevendesohet me id-ne e adminit
+			$mesazhi=addClient($_POST['client'],$_POST['contactPerson'],$_POST['position'],
+			$_POST['firstAddress'],$_POST['secondAddress'],$_POST['city'],
+			$_POST['state'],$_POST['zip'],$_POST['phone'],$_POST['mobPhone'],
+			$_POST['email'],$_POST['web'],$_POST['clientRegistrationNo'],
+			$_POST['fiscalNo'],$_POST['vatNo'],$_POST['clientType'],8,
+			$_POST['date']);// vlera 1 e duhet te zevendesohet me id-ne e adminit
 			echo "<p class='text-success'>".$mesazhi."</p>";
 		}
-
-	 ?>
-
-
+  ?>
     <div class="card  mx-auto mt-30">
 
       <div class="card-header">Regjistrimi i Klientit</div>

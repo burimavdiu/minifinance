@@ -1,7 +1,9 @@
 
 	<?php
 		if(isset($_POST['addUser'])){
-			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],$_POST['departments'],$_POST['password'],$_POST['email'],$_POST['username'],$_POST['phone'], 1);// 1 ne vend te id te regjistruesit apo administratorit
+			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],
+			$_POST['departments'],$_POST['password'],$_POST['email'],
+			$_POST['username'],$_POST['phone'], 1);// 1 ne vend te id te regjistruesit apo administratorit
 			echo $mesazhi;
 		}
 	?><!-- card-register forma e regjistrimit--> 

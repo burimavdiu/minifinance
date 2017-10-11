@@ -7,13 +7,26 @@ function addUser($firstname,$lastname,$dep_id,$password,$email,$username,$phone,
 		die("Gabim gjat shtimit te perdoruesit" . mysqli_error($dbconn));
 	}	
 }
-function addClient($client,$contactPerson,$position,$firstAddress,$secondAddress,$city,$state,$zip,$phone,$mobPhone,$email,$web,$clientRegistrationNo,
-                  $fiscalNo,$vatNo,$clientType,$registrar_id,$date){
+function addClient($client,$contactPerson,$position,$firstAddress,$secondAddress,$city,$state,$zip,$phone,$mobPhone,
+$email,$web,$clientRegistrationNo,$fiscalNo,$vatNo,$clientType,$registrar_id,$date){
 	global $dbconn;
-	$query_add_client="INSERT INTO clients(client,contact_person,job_position,address_1,address_2,city,state,zip,tel_no,mobile_no,client_email,client_web,business_register_no,fiscal_no,vat_no,client_type,user_id,registration_date) VALUES('$client','$contactPerson','$position','$firstAddress','$secondAddress','$city','$state','$zip','$phone','$mobPhone','$email','$web','$clientRegistrationNo','$fiscalNo','$vatNo','$clientType',$registrar_id,'$date')";
+	$query_add_client="INSERT INTO clients(client,contact_person,job_position,address_1,address_2,city,state,zip,tel_no,mobile_no,client_email,client_web,business_register_no,fiscal_no,vat_no,client_type,user_id,registration_date) 
+	VALUES('$client','$contactPerson','$position','$firstAddress','$secondAddress','$city','$state','$zip','$phone',
+	'$mobPhone','$email','$web','$clientRegistrationNo','$fiscalNo','$vatNo','$clientType',$registrar_id,'$date')";
 	$result_add_client=mysqli_query($dbconn, $query_add_client);
 	if(!$result_add_client){
 		die("<span>Gabim gjatë shtimit të klientit: ".mysqli_error($dbconn)."</span>");
+	} else {
+        return "Regjistrimi u realizua me sukses";
+    }
+}
+function addServices($servicename,$servicedescription,$actualprice,$registrar,$date){
+	global $dbconn;
+	$query_add_services="INSERT INTO services(service_name,service_description,actual_price,user_id,date) 
+	VALUES('$servicename','$servicedescription',$actualprice,$registrar,'$date')";
+	$result_add_service=mysqli_query($dbconn, $query_add_services);
+	if(!$result_add_service){
+		die("<span>Gabim gjatë shtimit të sherbimit: ".mysqli_error($dbconn)."</span>");
 	} else {
         return "Regjistrimi u realizua me sukses";
     }
@@ -27,6 +40,12 @@ function findClients(){
 	global $dbconn;
 	$query_clients="SELECT * FROM clients";
 	return $result_all_clients=mysqli_query($dbconn,$query_clients);
+}
+
+function findServices(){
+	global $dbconn;
+	$query_services="SELECT * FROM services";
+	return $result_all_services=mysqli_query($dbconn,$query_services);
 }
 function findDepartments(){
 	global $dbconn;
