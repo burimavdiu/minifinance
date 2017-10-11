@@ -1,7 +1,7 @@
 
 	<?php
 		if(isset($_POST['addUser'])){
-			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],$_POST['departments'],$_POST['password'],$_POST['email'],$_POST['username'],$_POST['phone']);
+			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],$_POST['departments'],$_POST['password'],$_POST['email'],$_POST['username'],$_POST['phone'], 1);// 1 ne vend te id te regjistruesit apo administratorit
 			echo $mesazhi;
 		}
 	?>
@@ -12,11 +12,11 @@
 		  <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <label for="firstname">Emri : </label>
+                <label for="firstname">Emri: </label>
                 <input name="firstname" class="form-control" id="firstname" type="text" aria-describedby="nameHelp">
               </div>
               <div class="col-md-6">
-                <label for="lastname">Mbiemri : </label>
+                <label for="lastname">Mbiemri: </label>
                 <input name="lastname" class="form-control" id="lastname" type="text" aria-describedby="nameHelp">
               </div>
             </div>
@@ -28,7 +28,7 @@
 				$departments=findDepartments();
 				
                 while($dep=mysqli_fetch_array($departments)){
-                    echo "<option value='".$dep['dep_id']."'> ". $dep['dep_name']. "</option>";
+                    echo "<option value='".$dep['dep_id']."'> ".$dep['dep_name']. "</option>";
                 }
                 echo '</select>';
             ?>
