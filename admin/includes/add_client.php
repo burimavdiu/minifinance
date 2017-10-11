@@ -5,9 +5,9 @@
 			echo $mesazhi;
 		}
 	*/  ?>
-    <div class="card card-register mx-auto mt-5">
+    <div class="card  mx-auto mt-30">
       <div class="card-header">Regjistrimi i Klientit</div>
-      <div class="card-body" style ="overflow: scroll; height: 70%">
+      <div class="card-body">
         <form method="post">		  
 		  <div class="form-group">
             <div class="form-row">
