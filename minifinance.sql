@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2017 at 05:58 PM
+-- Generation Time: Oct 11, 2017 at 03:36 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -37,7 +37,7 @@ CREATE TABLE `clients` (
   `mobile_no` varchar(20) NOT NULL,
   `tel_no` varchar(20) NOT NULL,
   `client_email` varchar(30) NOT NULL,
-  `client_web` varchar(40) NOT NULL,
+  `client_web` varchar(40) DEFAULT NULL,
   `business_register_no` varchar(30) NOT NULL,
   `fiscal_no` varchar(30) NOT NULL,
   `vat_no` tinyint(4) NOT NULL,
@@ -58,7 +58,9 @@ INSERT INTO `clients` (`client_id`, `contact_person`, `job_position`, `address_1
 (6, 'Muhamed Hoxha', 'Qender trajnimesh', 'Prishtine', 'Prishtine', 'KosovÃ«', '3324325325', '045/345-550', '049/029-345', 'tick.ks@yahoo.com', 'http://www.tick-ks.com/', '2352365643643636', '2432654366', 18, 'Klient1', 8, '2017-10-10', 'TICK', 'Gjakove'),
 (7, 'Florent Imeri', 'Kompani Softuerike', 'PrishtinÃ«', 'PrishtinÃ«', 'KosovÃ«', '3425436', '044/286-880', '0390/244-134', 'tick.ks@yahoo.com', 'http://www.probit-ks.com/', '3256246436', '65754747', 20, 'Klient1', 8, '2017-10-10', 'Probit', 'GjakovÃ«'),
 (8, 'Florent Imeri', 'Programer', 'PrishtinÃ«', 'PrishtinÃ«', 'KosovÃ«', '9086049376357', '044/263-053', '038/384-535', 'flor_enti18@hotmail.com', 'http://kosovaprom.com', '987985454364', '90683948693', 25, 'Klient1', 8, '2017-10-10', 'Florent Imeri', 'Nivokaz - GjakovÃ«'),
-(9, 'Florent Imeri', 'Programer', 'PrishtinÃ«', 'PrishtinÃ«', 'KosovÃ«', '9086049376357', '044/263-053', '038/384-535', 'flor_enti18@hotmail.com', 'http://kosovaprom.com', '987985454364', '90683948693', 25, 'Klient1', 8, '2017-10-10', 'Florent Imeri', 'Nivokaz - GjakovÃ«');
+(9, 'Florent Imeri', 'Programer', 'PrishtinÃ«', 'PrishtinÃ«', 'KosovÃ«', '9086049376357', '044/263-053', '038/384-535', 'flor_enti18@hotmail.com', 'http://kosovaprom.com', '987985454364', '90683948693', 25, 'Klient1', 8, '2017-10-10', 'Florent Imeri', 'Nivokaz - GjakovÃ«'),
+(10, 'Edi Gashi', 'JavaScript Developer', 'Lipjan', 'Lipjan', 'KosovÃ«', '892347875', '045/777-000', '044/999-888', 'e.gashi@yahoo.com', 'www.egashi.org', '83927483275', '984732875', 23, 'Klient1', 8, '0000-00-00', 'Edi Gashi', 'Sllovi'),
+(11, 'Egzona Maloku', 'Backend Developer', 'PrishtinÃ«', 'PrishtinÃ«', 'KosovÃ«', 'e235462', '045/345-222', '044/999-555', 'e.@gmail.com', 'www.tick.com', '90898', '90809', 21, 'Klient1', 8, '0000-00-00', 'Egzona Maloku', 'Gjilan');
 
 -- --------------------------------------------------------
 
@@ -238,7 +240,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `companies`
 --
