@@ -116,7 +116,11 @@
                 <input name="registrar" class="form-control" id="registrar" type="text">
               </div>
               <div class="col-md-6">
+<<<<<<< HEAD
                 <label class="h6" for="date">Koha e Regjistrimit</label>
+=======
+                <label for="date">Koha e Regjistrimit</label>
+>>>>>>> 80ee70b1b40f11344c1e813b7fca2db2b2a09df8
                 <input name="date" class="form-control" id="date" type="date">
               </div>
             </div>
