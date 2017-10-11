@@ -20,11 +20,11 @@ $email,$web,$clientRegistrationNo,$fiscalNo,$vatNo,$clientType,$registrar_id,$da
         return "Regjistrimi u realizua me sukses";
     }
 }
-function addServices($servicename,$servicedescription,$actualprice,$registrar,$date){
+function addService($servicename,$servicedescription,$actualprice,$registrar,$date){
 	global $dbconn;
-	$query_add_services="INSERT INTO services(service_name,service_description,actual_price,user_id,date) 
+	$query_add_service="INSERT INTO services(service_name,service_description,actual_price,user_id,date) 
 	VALUES('$servicename','$servicedescription',$actualprice,$registrar,'$date')";
-	$result_add_service=mysqli_query($dbconn, $query_add_services);
+	$result_add_service=mysqli_query($dbconn, $query_add_service);
 	if(!$result_add_service){
 		die("<span>Gabim gjatë shtimit të sherbimit: ".mysqli_error($dbconn)."</span>");
 	} else {
