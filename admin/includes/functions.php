@@ -1,12 +1,22 @@
 <?php
-
-function addUser($firstname,$lastname,$dep_id,$password,$email,$username,$phone){
+function addUser($firstname,$lastname,$dep_id,$password,$email,$username,$phone,$registrar_id){
 	global $dbconn;
-	$query_add_user="INSERT INTO users(firstname,lastname,dep_id,password,email,username,phone,reg_id) VALUES('$firstname','$lastname', $dep_id,'$password','$email','$username','$phone', 1)";
+	$query_add_user="INSERT INTO users(firstname,lastname,dep_id,password,email,username,phone,reg_id) VALUES('$firstname','$lastname', $dep_id,'$password','$email','$username','$phone', $registrar_id)";
 	$result_add_user=mysqli_query($dbconn, $query_add_user);
 	if(!$result_add_user){
 		die("Gabim gjat shtimit te perdoruesit" . mysqli_error($dbconn));
 	}	
+}
+function addClient($client,$contactPerson,$position,$firstAddress,$secondAddress,$city,$state,$zip,$phone,$mobPhone,$email,$web,$clientRegistrationNo,
+                  $fiscalNo,$vatNo,$clientType,$registrar_id,$date){
+	global $dbconn;
+	$query_add_client="INSERT INTO clients(client,contact_person,job_position,address_1,address_2,city,state,zip,tel_no,mobile_no,client_email,client_web,business_register_no,fiscal_no,vat_no,client_type,user_id,registration_date) VALUES('$client','$contactPerson','$position','$firstAddress','$secondAddress','$city','$state','$zip','$phone','$mobPhone','$email','$web','$clientRegistrationNo','$fiscalNo','$vatNo','$clientType',$registrar_id,'$date')";
+	$result_add_client=mysqli_query($dbconn, $query_add_client);
+	if(!$result_add_client){
+		die("<span>Gabim gjatë shtimit të klientit: ".mysqli_error($dbconn)."</span>");
+	} else {
+        return "Regjistrimi u realizua me sukses";
+    }
 }
 function findUsers(){
 	global $dbconn;

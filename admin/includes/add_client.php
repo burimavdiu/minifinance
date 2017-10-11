@@ -1,11 +1,15 @@
 
 	<?php
-		/* if(isset($_POST['addUser'])){
-			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],$_POST['departments'],$_POST['password'],$_POST['email'],$_POST['username'],$_POST['phone']);
-			echo $mesazhi;
+		if(isset($_POST['addClient'])){
+			$mesazhi=addClient($_POST['client'],$_POST['contactPerson'],$_POST['position'],$_POST['firstAddress'],$_POST['secondAddress'],$_POST['city'],$_POST['state'],$_POST['zip'],$_POST['phone'],$_POST['mobPhone'],$_POST['email'],$_POST['web'],$_POST['clientRegistrationNo'],$_POST['fiscalNo'],$_POST['vatNo'],$_POST['clientType'],8,$_POST['date']);// vlera 1 e duhet te zevendesohet me id-ne e adminit
+			echo "<p class='text-success'>".$mesazhi."</p>";
 		}
-	*/  ?>
+
+	 ?>
+
+
     <div class="card  mx-auto mt-30">
+
       <div class="card-header">Regjistrimi i Klientit</div>
       <div class="card-body">
         <form method="post">		  
@@ -61,19 +65,19 @@
               </div>
               <div class="col-md-6">
                 <label for="mobPhone">Telofoni Mobil</label>
-                <input class="form-control" id="mobPhone" type="text">
+                <input name="mobPhone" class="form-control" id="mobPhone" type="text">
               </div>
             </div>
             </div>
              <div class="form-group">
                 <div class="form-row">
               <div class="col-md-6">
-                <label for="password">Email</label>
+                <label for="email">Email</label>
                 <input name="email" class="form-control" id="email" type="email">
               </div>
               <div class="col-md-6">
                 <label for="web">Web Faqja</label>
-                <input class="form-control" id="web" type="web">
+                <input name="web" class="form-control" id="web" type="web">
               </div>
             </div>
             </div>
@@ -89,8 +93,8 @@
                 <input name="fiscalNo" class="form-control" id="fiscalNo" type="text">
               </div>
               <div class="col-md-6">
-                <label for="VatNo">Nr. TVSH</label>
-                <input class="form-control" id="VatNo" type="text">
+                <label for="vatNo">Nr. TVSH</label>
+                <input name="vatNo" class="form-control" id="vatNo" type="text">
               </div>
             </div>
             </div>
@@ -108,7 +112,7 @@
               </div>
               <div class="col-md-6">
                 <label for="date">Koha e Regjistrimit</label>
-                <input class="form-control" id="date" type="datetime-local">
+                <input name="date" class="form-control" id="date" type="datetime-local">
               </div>
             </div>
             </div>
