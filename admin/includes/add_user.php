@@ -4,8 +4,8 @@
 			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],$_POST['departments'],$_POST['password'],$_POST['email'],$_POST['username'],$_POST['phone'], 1);// 1 ne vend te id te regjistruesit apo administratorit
 			echo $mesazhi;
 		}
-	?>
-    <div class="card card-register mx-auto mt-5">
+	?><!-- card-register forma e regjistrimit--> 
+    <div class="card  mx-auto mt-30">
       <div class="card-header">Regjistrimi i Përdoruesit</div>
       <div class="card-body">
         <form method="post">		  
@@ -22,7 +22,7 @@
             </div>
           </div>
             <div class="form-group">
-            <label for="department">Departamenti</label>
+            <label for="department">Departamenti :</label>
             <?php
                 echo '<select name="departments" class="form-control"  id="department">';
 				$departments=findDepartments();
@@ -34,25 +34,25 @@
             ?>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Email :</label>
             <input name="email" class="form-control" id="email" type="email" aria-describedby="emailHelp" >
           </div>
 		  <div class="form-group">
-            <label for="phone">Telefoni</label>
+            <label for="phone">Telefoni :</label>
             <input name="phone" class="form-control" id="phone" type="text" aria-describedby="telefoniHelp" >
           </div>
 		   <div class="form-group">
-            <label for="username">Përdoruesi</label>
+            <label for="username">Përdoruesi :</label>
             <input name="username" class="form-control" id="username" type="text" aria-describedby="perdoruesiHelp" >
           </div>
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <label for="password">Fjalëkalimi</label>
+                <label for="password">Fjalëkalimi :</label>
                 <input name="password" class="form-control" id="password" type="password">
               </div>
               <div class="col-md-6">
-                <label for="confirmPassword">Konfirmo Fjalëkalimin</label>
+                <label for="confirmPassword">Konfirmo Fjalëkalimin :</label>
                 <input class="form-control" id="confirmPassword" type="password">
               </div>
             </div>

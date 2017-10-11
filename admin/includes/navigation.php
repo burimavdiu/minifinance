@@ -54,14 +54,14 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">Components</span>
+            <span class="nav-link-text">Shërbimet</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="navbar.html">Navbar</a>
+              <a href="services.php">Lista e shërbimeve</a>
             </li>
             <li>
-              <a href="cards.html">Cards</a>
+              <a href="services.php?source=add_services">Shto shërbime </a>
             </li>
           </ul>
         </li>

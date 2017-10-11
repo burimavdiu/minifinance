@@ -4,10 +4,14 @@
 			$mesazhi=addClient($_POST['client'],$_POST['contactPerson'],$_POST['position'],$_POST['firstAddress'],$_POST['secondAddress'],$_POST['city'],$_POST['state'],$_POST['zip'],$_POST['phone'],$_POST['mobPhone'],$_POST['email'],$_POST['web'],$_POST['clientRegistrationNo'],$_POST['fiscalNo'],$_POST['vatNo'],$_POST['clientType'],8,$_POST['date']);// vlera 1 e duhet te zevendesohet me id-ne e adminit
 			echo "<p class='text-success'>".$mesazhi."</p>";
 		}
-	?>
-    <div class="card card-register mx-auto mt-5">
+
+	 ?>
+
+
+    <div class="card  mx-auto mt-30">
+
       <div class="card-header">Regjistrimi i Klientit</div>
-      <div class="card-body" style ="overflow: scroll; height: 70%">
+      <div class="card-body">
         <form method="post">		  
 		  <div class="form-group">
             <div class="form-row">
