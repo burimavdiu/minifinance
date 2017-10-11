@@ -15,12 +15,12 @@
 				$source="";
 			}
 			switch($source){
-				case "add_services";
-				include "includes/add_services.php";
+				case "add_service";
+				include "includes/add_service.php";
 				break;
 				
-				case "edit_client";
-				include "/includes/edit_services.php";
+				case "edit_service";
+				include "/includes/edit_service.php";
 				break;
 				
 				default:

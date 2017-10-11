@@ -1,51 +1,44 @@
 
 	<?php
-		/*if(isset($_POST['addUser'])){
-			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],$_POST['departments'],$_POST['password'],$_POST['email'],$_POST['username'],$_POST['phone']);
-			echo $mesazhi;
-			
-		}*/
-	?>
-	
-	<?php
-		if(isset($_POST['addServices'])){
-			$mesazhi=addServices($_POST['servicename'],$_POST['servicedescription'],$_POST['actualprice'],8,
+		if(isset($_POST['addService'])){
+            $registrar=SESSION['user']['user_id'];
+			$mesazhi=addService($_POST['servicename'],$_POST['servicedescription'],$_POST['actualprice'],$registrar,
 			$_POST['date']);// vlera 1 e duhet te zevendesohet me id-ne e adminit
 			echo "<p class='text-success'>".$mesazhi."</p>";
 		}
 
-	 ?>
+    ?>
     <div class="card  mx-auto mt-30">
-      <div class="card-header">Regjistrimi i shërbimit</div>
+      <div class="card-header h5">Regjistrimi i shërbimit</div>
       <div class="card-body">
         <form method="post">		  
 		  <div class="form-group">
             <div class="form-row">
-                <label class="teksti" for="servicename">Emri i shërbimit: </label>
+                <label class="h6" for="servicename">Emri i shërbimit: </label>
                 <input name="servicename" class="form-control" id="servicename" type="text" aria-describedby="nameHelp">
             </div>
           </div>
 		   <div class="form-group">
             <div class="form-row">
-                <label for="servicedescription">Përshkrimi i shërbimit: </label>
+                <label class="h6" for="servicedescription">Përshkrimi i shërbimit: </label>
                 <input name="servicedescription" class="form-control" id="servicedescription" type="text" aria-describedby="nameHelp">
             </div>
           </div>
 		   <div class="form-group">
             <div class="form-row">
-                <label for="actualprice">Shuma aktuale: </label>
+                <label class="h6" for="actualprice">Shuma aktuale: </label>
                 <input name="actualprice" class="form-control" id="actualprice" type="text" aria-describedby="nameHelp">
             </div>
           </div>
 		  <div class="form-group">
             <div class="form-row">
-                <label for="registrar">Regjistruesi: </label>
+                <label class="h6" for="registrar">Regjistruesi: </label>
                 <input name="registrar" class="form-control" id="registrar" type="text" aria-describedby="nameHelp">
             </div>
           </div>
 		  <div class="form-group">
             <div class="form-row">
-                <label for="date">Data: </label>
+                <label class="h6" for="date">Data: </label>
                 <input name="date" class="form-control" id="date" type="date" aria-describedby="nameHelp">
             </div>
           </div>
@@ -64,7 +57,7 @@
 		  
           
          
-		  <input name="addServices" type="submit" class="btn btn-primary btn-block" value="Regjistro">
+		  <input name="addService" type="submit" class="btn btn-primary btn-block" value="Regjistro">
         </form>
       </div>
     </div>

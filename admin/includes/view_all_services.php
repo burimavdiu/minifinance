@@ -7,7 +7,7 @@
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>Emiri i shërbimit</th>
+              <th>Emri i shërbimit</th>
               <th>Përshkrimi i shërbimit</th>
               <th>Shuma aktuale</th>
               <th>Regjistruesi</th>

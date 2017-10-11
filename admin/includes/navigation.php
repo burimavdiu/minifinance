@@ -61,7 +61,7 @@
               <a href="services.php">Lista e shërbimeve</a>
             </li>
             <li>
-              <a href="services.php?source=add_services">Shto shërbime </a>
+              <a href="services.php?source=add_service">Shto shërbim </a>
             </li>
           </ul>
         </li>

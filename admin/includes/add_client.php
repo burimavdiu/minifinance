@@ -114,7 +114,7 @@
               </div>
               <div class="col-md-6">
                 <label for="date">Koha e Regjistrimit</label>
-                <input name="date" class="form-control" id="date" type="datetime-local">
+                <input name="date" class="form-control" id="date" type="date">
               </div>
             </div>
             </div>
