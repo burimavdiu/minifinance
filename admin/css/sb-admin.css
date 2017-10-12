@@ -55,8 +55,6 @@ body.fixed-nav {
 .teksti {
 	 font-weight: bold;
 }
-
-
 #mainNav .navbar-collapse {
   overflow: auto;
   max-height: 75vh; }

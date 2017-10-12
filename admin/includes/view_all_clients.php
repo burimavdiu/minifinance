@@ -75,15 +75,13 @@
                 echo "<td>".  $client['fiscal_no'] . "</td>";
                 echo "<td>".  $client['vat_no'] . "</td>";
                 echo "<td>".  $client['client_type'] . "</td>";
-                echo "<td>".  $client['client_id'] . "</td>";
+                echo "<td>".  $client['user_id'] . "</td>";
                 echo "<td>".  $client['registration_date'] . "</td>";
                 echo "<td><a href='clients.php?source=edit_client&client_id=$client_id'>Edit</a></td>";
                 echo "<td><a href='clients.php?delete=$client_id'>Delete</a></td>";
                 echo "</tr>";
             }
           ?>
-		  
-		    
           </tbody>
         </table>
       </div>

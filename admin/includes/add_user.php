@@ -1,9 +1,10 @@
 
 	<?php
 		if(isset($_POST['addUser'])){
+            $registrar=$_SESSION['user']['user_id'];
 			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],
 			$_POST['departments'],$_POST['password'],$_POST['email'],
-			$_POST['username'],$_POST['phone'], 1);// 1 ne vend te id te regjistruesit apo administratorit
+			$_POST['username'],$_POST['phone'],$registrar);
 			echo $mesazhi;
 		}
 	?><!-- card-register forma e regjistrimit--> 
@@ -24,7 +25,7 @@
             </div>
           </div>
             <div class="form-group">
-            <label class="h6" for="department">Departamenti :</label>
+            <label for="department">Departamenti :</label>
             <?php
                 echo '<select name="departments" class="form-control"  id="department">';
 				$departments=findDepartments();

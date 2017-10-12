@@ -12,7 +12,6 @@
               <th>Shuma aktuale</th>
               <th>Regjistruesi</th>
               <th>Data</th>
-              
               <td>Edit</td>
               <td>Delete</th>
             </tr>
@@ -24,13 +23,12 @@
               <th>Shuma aktuale</th>
               <th>Regjistruesi</th>
               <th>Data</th>
-              
               <th>Edit</th>
               <th>Delete</th>
             </tr>
           </tfoot>
           <tbody>
-          <?php
+		  <?php
            $services=findServices();
             while($service=mysqli_fetch_array($services)){
                 $service_id=$service['service_id'];
@@ -40,15 +38,11 @@
                 echo "<td>".  $service['actual_price'] . "</td>";
                 echo "<td>".  $service['user_id'] . "</td>";
                 echo "<td>".  $service['date'] . "</td>";
-       
                 echo "<td><a href='services.php?source=edit_service&service_id=$service_id'>Edit</a></td>";
                 echo "<td><a href='services.php?delete=$service_id'>Delete</a></td>";
                 echo "</tr>";
             }
           ?>
-		   
-		  
-		  
           </tbody>
         </table>
       </div>

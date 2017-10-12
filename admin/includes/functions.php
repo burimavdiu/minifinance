@@ -4,7 +4,7 @@ function addUser($firstname,$lastname,$dep_id,$password,$email,$username,$phone,
 	$query_add_user="INSERT INTO users(firstname,lastname,dep_id,password,email,username,phone,reg_id) VALUES('$firstname','$lastname', $dep_id,'$password','$email','$username','$phone', $registrar_id)";
 	$result_add_user=mysqli_query($dbconn, $query_add_user);
 	if(!$result_add_user){
-		die("Gabim gjat shtimit te perdoruesit" . mysqli_error($dbconn));
+		die("<span class='text-danger'>Gabim gjat shtimit te perdoruesit" . mysqli_error($dbconn)."</span>");
 	}	
 }
 function addClient($client,$contactPerson,$position,$firstAddress,$secondAddress,$city,$state,$zip,$phone,$mobPhone,
@@ -15,7 +15,7 @@ $email,$web,$clientRegistrationNo,$fiscalNo,$vatNo,$clientType,$registrar_id,$da
 	'$mobPhone','$email','$web','$clientRegistrationNo','$fiscalNo','$vatNo','$clientType',$registrar_id,'$date')";
 	$result_add_client=mysqli_query($dbconn, $query_add_client);
 	if(!$result_add_client){
-		die("<span>Gabim gjatë shtimit të klientit: ".mysqli_error($dbconn)."</span>");
+		die("<span class='text-danger'>Gabim gjatë shtimit të klientit: ".mysqli_error($dbconn)."</span>");
 	} else {
         return "Regjistrimi u realizua me sukses";
     }
@@ -26,7 +26,7 @@ function addService($servicename,$servicedescription,$actualprice,$registrar,$da
 	VALUES('$servicename','$servicedescription',$actualprice,$registrar,'$date')";
 	$result_add_service=mysqli_query($dbconn, $query_add_service);
 	if(!$result_add_service){
-		die("<span>Gabim gjatë shtimit të sherbimit: ".mysqli_error($dbconn)."</span>");
+		die("<span class='text-danger'>Gabim gjatë shtimit të sherbimit: ".mysqli_error($dbconn)."</span>");
 	} else {
         return "Regjistrimi u realizua me sukses";
     }

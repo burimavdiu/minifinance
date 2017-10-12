@@ -14,6 +14,8 @@
   <link href="admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="admin/css/sb-admin.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </head>
 
 <body class="bg-dark">
@@ -21,7 +23,7 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form method="post" action="includes/login.php">
+        <form id="loginform" method="post" action="includes/login.php">
           <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
             <input name="username" class="form-control" id="exampleInputUsername1" type="text" aria-describedby="userHelp" placeholder="Enter username">
@@ -36,6 +38,16 @@
                 <input class="form-check-input" type="checkbox"> Remember Password</label>
             </div>
           </div>
+            <?php
+                session_start();
+                if (isset($_SESSION["login_error"])) {
+                    echo "<span id='message' class='text-danger'>Username ose Password janë gabim</span>";
+                    unset($_SESSION['login_error']);
+                } else {
+                    echo "<span id='message' class='text-danger'></span>";
+                }
+            ?>
+          <span id="message" class="text-danger"></span>
           <input name="login" type="submit" class="btn btn-primary btn-block" value="Login" />
         </form>
         <div class="text-center">
