@@ -92,15 +92,15 @@
 		  
           <div class="form-group">
                <div class="form-row">
-				 <div class="col-md-6">
+				 <div class="col-md-4">
               <label class="h6" for="clientRegistrationNo">Nr. Regjistrimit të Klientit:</label>
             <input name="clientRegistrationNo" class="form-control" id="clientRegistrationNo" type="text" aria-describedby="telefoniHelp" >
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <label class="h6" for="fiscalNo">Nr. Fiskal:</label>
                 <input name="fiscalNo" class="form-control" id="fiscalNo" type="text">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <label class="h6" for="vatNo">Nr. TVSH:</label>
                 <input name="vatNo" class="form-control" id="vatNo" type="text">
               </div>
