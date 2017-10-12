@@ -15,15 +15,23 @@ if(isset($_POST['login'])){
 	
 	if(mysqli_num_rows($resul_login)==1){
 		$user=mysqli_fetch_assoc($resul_login);
+		$db_userid=$user['userid'];
 		$db_username=$user['username'];
 		$db_password=$user['password'];
+		$db_firstname=$user['firstname'];
+		$db_lastname=$user['lastname'];
+		$db_role=$user['role'];
 	}
 	if($username!==$db_username && $password!==$db_password){
 		header("Location: ../index.php");
 	}
 	else if($username===$db_username && $password===$db_password){
 		
-		$_SESSION['user']=$user;
+		$_SESSION['userid']=$db_userid;
+		$_SESSION['username']=$db_username;
+		$_SESSION['firstname']=$db_firstname;
+		$_SESSION['lastname']=$db_lastname;
+		$_SESSION['role']=$db_role;
 		
 		header("Location: ../admin");
 	}

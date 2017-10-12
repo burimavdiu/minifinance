@@ -54,3 +54,11 @@
       </div>
     </div>
     <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+<?php
+	if(isset($_GET['delete'])){
+		$service_del_id=$_GET['delete'];
+		$query_del_service="DELETE FROM services WHERE service_id=$service_del_id";
+		$result_del_user=mysqli_query($dbconn,$query_del_service);
+		header('Location: services.php');
+	}
+?>
