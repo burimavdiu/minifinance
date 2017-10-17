@@ -25,17 +25,19 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="charts.html">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">Charts</span>
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="company">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseCompany" data-parent="#exampleAccordion">
+           <i class="fa fa-building" aria-hidden="true"></i>
+            <span class="nav-link-text">Kompanit</span>
           </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="tables.html">
-            <i class="fa fa-fw fa-table"></i>
-            <span class="nav-link-text">Tables</span>
-          </a>
+          <ul class="sidenav-second-level collapse" id="collapseCompany">
+            <li>
+              <a href="company.php">Lista e kompanive</a>
+            </li>
+            <li>
+              <a href="company.php?source=add_company">Shto kompani</a>
+            </li>
+          </ul>
         </li>
 		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseUsers" data-parent="#exampleAccordion">
@@ -51,20 +53,60 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="services">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseServices" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">Components</span>
+            <span class="nav-link-text">Shërbimet</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents">
+          <ul class="sidenav-second-level collapse" id="collapseServices">
             <li>
-              <a href="navbar.html">Navbar</a>
+              <a href="services.php">Lista e shërbimeve</a>
             </li>
             <li>
-              <a href="cards.html">Cards</a>
+              <a href="services.php?source=add_service">Shto shërbim</a>
             </li>
           </ul>
         </li>
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="searchbill">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#searchbill" data-parent="#exampleAccordion">
+          <i class="fa fa-list" aria-hidden="true"></i>
+            <span class="nav-link-text">Kërko raportin</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="searchbill">
+            <li>
+              <a href="searchfatura.php?source=search_bill">Kërko raportin</a>
+            </li>
+          </ul>
+        </li>
+
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="addbill">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#addbill" data-parent="#exampleAccordion">
+          <i class="fa fa-google-wallet" aria-hidden="true"></i>
+            <span class="nav-link-text">Fatura</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="addbill">
+             <li>
+              <a href="bill.php">Lista e faturave</a>
+            </li>
+            <li>
+              <a href="bill.php?source=add_bill">Shto/Ndrysho faturë</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="charts.html">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">Charts</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="tables.html">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Tables</span>
+          </a>
+        </li>
+		
+		
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>

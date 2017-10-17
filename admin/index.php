@@ -1,5 +1,12 @@
-<?php include "includes/header.php";?>
 
+
+<?php
+    include "includes/header.php";
+    session_start();
+    if (!isset($_SESSION["user"])) {
+        header("Location: ../index.php");
+    }
+?>
   <!-- Navigation-->
   <?php include "includes/navigation.php";?>
   <div class="content-wrapper">

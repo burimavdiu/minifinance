@@ -26,16 +26,16 @@
 				$source="";
 			}
 			switch($source){
-				case "add_user";
-				include "includes/add_user.php";
+				case "add_bill";
+				include "includes/add_bill.php";
 				break;
 				
-				case "edit_user";
-				include "/includes/edit_user.php";
+				case "edit_bill";
+				include "/includes/edit_bill.php";
 				break;
 				
 				default:
-				include "includes/view_all_users.php";
+				include "includes/view_all_bills.php";
 				break;
 			 }
 			?>

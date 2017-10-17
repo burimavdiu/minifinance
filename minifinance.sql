@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2017 at 03:05 PM
+-- Generation Time: Oct 11, 2017 at 03:36 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -30,21 +30,37 @@ CREATE TABLE `clients` (
   `client_id` int(11) NOT NULL,
   `contact_person` varchar(30) NOT NULL,
   `job_position` varchar(30) NOT NULL,
-  `address` varchar(30) NOT NULL,
+  `address_1` varchar(30) NOT NULL,
   `city` varchar(30) NOT NULL,
   `state` varchar(30) NOT NULL,
   `zip` varchar(30) NOT NULL,
   `mobile_no` varchar(20) NOT NULL,
   `tel_no` varchar(20) NOT NULL,
   `client_email` varchar(30) NOT NULL,
-  `client_web` varchar(40) NOT NULL,
+  `client_web` varchar(40) DEFAULT NULL,
   `business_register_no` varchar(30) NOT NULL,
   `fiscal_no` varchar(30) NOT NULL,
   `vat_no` tinyint(4) NOT NULL,
   `client_type` varchar(20) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `registration_date` date NOT NULL
+  `registration_date` date NOT NULL,
+  `client` varchar(50) DEFAULT NULL,
+  `address_2` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `clients`
+--
+
+INSERT INTO `clients` (`client_id`, `contact_person`, `job_position`, `address_1`, `city`, `state`, `zip`, `mobile_no`, `tel_no`, `client_email`, `client_web`, `business_register_no`, `fiscal_no`, `vat_no`, `client_type`, `user_id`, `registration_date`, `client`, `address_2`) VALUES
+(1, 'Florent Imeri', 'Database Admin', 'Prishtine', 'Prishtine', 'Kosove', '394273875328', '044/123-456', '', 'florentimeri@yahoo.com', 'http://kosovaprom.com', '498237489324', '2834783275', 20, 'Client i rregullt', 8, '2017-10-09', 'Florent Imeri', ''),
+(2, 'Burim Avdiu', 'Software Manager', 'Prishtine', 'Prishtine', 'Kosove', '324236562', '049/135-679', '', 'b.avdiu@hotmail.com', 'www.probit-ks.com', '324235325265', '2432564264', 25, 'Klient', 9, '2017-10-09', 'Burim Avdiu', ''),
+(6, 'Muhamed Hoxha', 'Qender trajnimesh', 'Prishtine', 'Prishtine', 'KosovÃ«', '3324325325', '045/345-550', '049/029-345', 'tick.ks@yahoo.com', 'http://www.tick-ks.com/', '2352365643643636', '2432654366', 18, 'Klient1', 8, '2017-10-10', 'TICK', 'Gjakove'),
+(7, 'Florent Imeri', 'Kompani Softuerike', 'PrishtinÃ«', 'PrishtinÃ«', 'KosovÃ«', '3425436', '044/286-880', '0390/244-134', 'tick.ks@yahoo.com', 'http://www.probit-ks.com/', '3256246436', '65754747', 20, 'Klient1', 8, '2017-10-10', 'Probit', 'GjakovÃ«'),
+(8, 'Florent Imeri', 'Programer', 'PrishtinÃ«', 'PrishtinÃ«', 'KosovÃ«', '9086049376357', '044/263-053', '038/384-535', 'flor_enti18@hotmail.com', 'http://kosovaprom.com', '987985454364', '90683948693', 25, 'Klient1', 8, '2017-10-10', 'Florent Imeri', 'Nivokaz - GjakovÃ«'),
+(9, 'Florent Imeri', 'Programer', 'PrishtinÃ«', 'PrishtinÃ«', 'KosovÃ«', '9086049376357', '044/263-053', '038/384-535', 'flor_enti18@hotmail.com', 'http://kosovaprom.com', '987985454364', '90683948693', 25, 'Klient1', 8, '2017-10-10', 'Florent Imeri', 'Nivokaz - GjakovÃ«'),
+(10, 'Edi Gashi', 'JavaScript Developer', 'Lipjan', 'Lipjan', 'KosovÃ«', '892347875', '045/777-000', '044/999-888', 'e.gashi@yahoo.com', 'www.egashi.org', '83927483275', '984732875', 23, 'Klient1', 8, '0000-00-00', 'Edi Gashi', 'Sllovi'),
+(11, 'Egzona Maloku', 'Backend Developer', 'PrishtinÃ«', 'PrishtinÃ«', 'KosovÃ«', 'e235462', '045/345-222', '044/999-555', 'e.@gmail.com', 'www.tick.com', '90898', '90809', 21, 'Klient1', 8, '0000-00-00', 'Egzona Maloku', 'Gjilan');
 
 -- --------------------------------------------------------
 
@@ -160,7 +176,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `firstname`, `lastname`, `password`, `dep_id`, `email`, `date`, `username`, `phone`, `reg_id`) VALUES
 (8, 'Florent', 'Imeri', '123', 1, 'florentimeri@gmail.com', '0000-00-00', 'florentimeri', '044/263-053', 1),
-(9, 'Edi', 'Gashi', '342`', 1, 'edi.gashi@yahoo.com', '0000-00-00', 'edigashi', '044/123-123', 1);
+(9, 'Edi', 'Gashi', '342', 1, 'edi.gashi@yahoo.com', '0000-00-00', 'edigashi', '044/123-123', 1),
+(10, 'Burim', 'Avdiu', 'burim123', 1, 'b.avdiu@hotmail.de', '0000-00-00', 'burimavdiu', '044/234-553', 1);
 
 --
 -- Indexes for dumped tables
@@ -223,7 +240,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `companies`
 --
@@ -248,7 +265,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- Constraints for dumped tables
 --

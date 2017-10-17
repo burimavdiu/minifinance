@@ -10,13 +10,7 @@
 	<div class="content-wrapper">
 		<div class="container-fluid">
 		  <!-- Breadcrumbs-->
-		 <!-- <ol class="breadcrumb">
-			<li class="breadcrumb-item">
-			  <a href="./users.php">Users</a>
-			</li>
-			<li class="breadcrumb-item active">My Dashboard</li>
-		  </ol>
-		  -->
+
 		  <!-- Icon Cards-->
 		  <?php
 			if(isset($_GET['source'])){
@@ -26,19 +20,19 @@
 				$source="";
 			}
 			switch($source){
-				case "add_user";
-				include "includes/add_user.php";
+				case "search_bill";
+				include "includes/searchbill.php";
 				break;
 				
-				case "edit_user";
-				include "/includes/edit_user.php";
+				case "edit_client";
+				include "/includes/edit_client.php";
 				break;
 				
 				default:
-				include "includes/view_all_users.php";
+				include "includes/view_all_clients.php";
 				break;
-			 }
-			?>
+			}
+			?>	
 			
 		</div>
 		 <!-- /.container-fluid-->

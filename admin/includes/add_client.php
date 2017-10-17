@@ -1,118 +1,149 @@
 
 	<?php
-		/* if(isset($_POST['addUser'])){
-			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],$_POST['departments'],$_POST['password'],$_POST['email'],$_POST['username'],$_POST['phone']);
-			echo $mesazhi;
+		if(isset($_POST['addClient'])){
+			$mesazhi=addClient($_POST['client'],$_POST['contactPerson'],$_POST['position'],
+			$_POST['firstAddress'],$_POST['secondAddress'],$_POST['city'],
+			$_POST['state'],$_POST['zip'],$_POST['phone'],$_POST['mobPhone'],
+			$_POST['email'],$_POST['web'],$_POST['clientRegistrationNo'],
+			$_POST['fiscalNo'],$_POST['vatNo'],$_POST['clientType'],8,
+			$_POST['date']);// vlera 1 e duhet te zevendesohet me id-ne e adminit
+			echo "<p class='text-success'>".$mesazhi."</p>";
 		}
-	*/  ?>
-    <div class="card card-register mx-auto mt-5">
-      <div class="card-header">Regjistrimi i Klientit</div>
-      <div class="card-body" style ="overflow: scroll; height: 70%">
-        <form method="post">		  
-		  <div class="form-group">
+  ?>
+  
+  
+    <div class="card  mx-auto mt-30">
+		<div class="card-header h4">Regjistrimi i Klientit</div>
+		<div class="card-body">
+        <form method="post">	
+			<h5 class="alert alert-info">Të dhënat për klientin:</h5>
+			<hr> 
+		<div class="form-group">
             <div class="form-row">
-              <div class="col-md-6">
-                <label for="client">Klienti : </label>
-                <input name="client" class="form-control" id="client" type="text" aria-describedby="clientHelp">
+				<div class="col-md-6 ">
+				<div class="col-md-12">
+					<label class="h6" for="client">Klienti: </label>
+					<input name="client" class="form-control" id="client" type="text" aria-describedby="clientHelp" required  autofocus>
+				</div>
+				</div>
+			<div class="col-md-6">
+			<div class="col-md-12">
+					<label class="h6" for="contactPerson">Kontakt personi: </label>
+					<input name="contactPerson" class="form-control" id="contactPerson" type="text" aria-describedby="contactPersonHelp" required>
               </div>
-              <div class="col-md-6">
-                <label for="contactPerson">Kontakt Personi  : </label>
-                <input name="contactPerson" class="form-control" id="contactPerson" type="text" aria-describedby="contactPersonHelp">
-              </div>
-            </div>
-          </div>
-            <div class="form-group">
-            <label for="position">Pozita(Titulli)</label>
-              <input name="position" class="form-control" id="position" type="text" aria-describedby="positionHelp">
-          </div>
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <label for="firstAddress">Adresa I </label>
-                <input name="firstAddress" class="form-control" id="firstAddress" type="text" aria-describedby="firstAddressHelp">
-              </div>
-              <div class="col-md-6">
-                <label for="secondAddress">Adresa II  : </label>
-                <input name="secondAddress" class="form-control" id="secondAddress" type="text" aria-describedby="secondAddressHelp">
-              </div>
-            </div>
-          </div>
-            <div class="form-group">
-                <div class="form-row">
-              <div class="col-md-4">
-                <label for="city">Qyteti</label>
-                <input name="city" class="form-control" id="city" type="text" aria-describedby="cityHelp">
-              </div>
-              <div class="col-md-4">
-                <label for="state">Shteti</label>
-                <input name="state" class="form-control" id="state" type="text" aria-describedby="stateHelp">
-              </div>
-                <div class="col-md-4">
-                    <label for="zip">Kodi Postar(Zip)</label>
-                    <input name="zip" class="form-control" id="lzip" type="text" aria-describedby="zipHelp">
-              </div>
+			  </div>
             </div>
           </div>
         <div class="form-group">
             <div class="form-row">
-              <div class="col-md-6">
-                <label for="phone">Telofoni i Punes</label>
-                <input name="phone" class="form-control" id="phone" type="phone">
+				<div class="col-md-6">
+				<div class="col-md-12">
+					<label class="h6" for="position">Pozita(Titulli): </label>
+					<input name="position" class="form-control" id="position" type="text" aria-describedby="positionHelp">  
+				</div>
+				</div>
+			   <div class="col-md-6">
+			   <div class="col-md-12">
+					<label class="h6" for="firstAddress">Adresa:</label>
+					<input name="firstAddress" class="form-control" id="firstAddress" type="text" aria-describedby="firstAddressHelp">
               </div>
-              <div class="col-md-6">
-                <label for="mobPhone">Telofoni Mobil</label>
-                <input class="form-control" id="mobPhone" type="text">
-              </div>
+			  </div>
             </div>
-            </div>
-             <div class="form-group">
-                <div class="form-row">
-              <div class="col-md-6">
-                <label for="password">Email</label>
-                <input name="email" class="form-control" id="email" type="email">
-              </div>
-              <div class="col-md-6">
-                <label for="web">Web Faqja</label>
-                <input class="form-control" id="web" type="web">
-              </div>
-            </div>
-            </div>
-		  <div class="form-group">
-            <label for="clientRegistrationNo">Nr. Regjistrimit të Klientit</label>
-            <input name="clientRegistrationNo" class="form-control" id="clientRegistrationNo" type="text" aria-describedby="telefoniHelp" >
-          </div>
-		   
-          <div class="form-group">
-                <div class="form-row">
-              <div class="col-md-6">
-                <label for="fiscalNo">Nr. Fiskal</label>
-                <input name="fiscalNo" class="form-control" id="fiscalNo" type="text">
-              </div>
-              <div class="col-md-6">
-                <label for="VatNo">Nr. TVSH</label>
-                <input class="form-control" id="VatNo" type="text">
-              </div>
-            </div>
-            </div>
-            <div class="form-group">
-            <label for="clientType">Llojo i Klientit</label>
-                <select name="clientType" class="form-control"  id="clientType">
-                    <option>Klient1</option>
-                </select>
-          </div>
-          <div class="form-group">
+        </div>
+        <div class="form-group">
             <div class="form-row">
-              <div class="col-md-6">
-                <label for="registrar">Regjistroi</label>
-                <input name="registrar" class="form-control" id="registrar" type="text">
-              </div>
-              <div class="col-md-6">
-                <label for="date">Koha e Regjistrimit</label>
-                <input class="form-control" id="date" type="datetime-local">
-              </div>
+				<div class="col-md-6">
+				<div class="col-md-12">
+					<label class="h6" for="city">Qyteti:</label>
+					<input name="city" class="form-control" id="city" type="text" aria-describedby="cityHelp">
+				</div>
+				</div>
+				<div class="col-md-6">
+				<div class="col-md-12">
+					<label class="h6" for="state">Shteti:</label>
+					<input name="state" class="form-control" id="state" type="text" aria-describedby="stateHelp">
+				</div>
+				</div>
+            </div>
+		</div>
+		
+		<div class="form-group">
+            <div class="form-row">
+				<div class="col-md-6">
+				<div class="col-md-12">
+					<label class="h6" for="phone">Telofoni i punes:</label>
+					<input name="phone" class="form-control" id="phone" type="phone">
+				</div>
+				</div>
+            <div class="col-md-6">
+			<div class="col-md-12">
+					<label class="h6" for="mobPhone">Telofoni mobil:</label>
+					<input name="mobPhone" class="form-control" id="mobPhone" type="text" required>
             </div>
             </div>
-		  <input name="addClient" type="submit" class="btn btn-primary btn-block" value="Regjistro">
-        </form>
-      </div>
-    </div>
+			</div>
+        </div>
+		<div class="form-group">
+            <div class="form-row">
+				<div class="col-md-6">
+				<div class="col-md-12">
+					<label class="h6" for="email">Email:</label>
+					<input name="email" class="form-control" id="email" type="email">
+				</div>
+				</div>
+				<div class="col-md-6">
+				<div class="col-md-12">
+					<label class="h6" for="web">Web Faqja:</label>
+					<input name="web" class="form-control" id="web" type="web">
+				</div>
+				</div>
+			</div>
+		</div>
+
+			<hr>
+			<h5 class="alert alert-info" >Të dhënat fiskale për klientin:</h5>
+			<hr>
+		  
+		<div class="form-group">
+			<div class="form-row">
+				<div class="col-md-4">
+				<div class="col-md-12">
+					<label class="h6" for="clientRegistrationNo">Nr. Regjistrimit të Klientit:</label>
+					<input name="clientRegistrationNo" class="form-control" id="clientRegistrationNo" type="text" aria-describedby="telefoniHelp"  >
+				</div>
+				</div>
+				<div class="col-md-4">
+				<div class="col-md-12">
+					<label class="h6" for="fiscalNo">Nr. Fiskal:</label>
+					<input name="fiscalNo" class="form-control" id="fiscalNo" type="text">
+				</div>
+				</div>
+				<div class="col-md-4">
+				<div class="col-md-12">
+					<label class="h6" for="vatNo">Nr. TVSH:</label>
+					<input name="vatNo" class="form-control" id="vatNo" type="text">
+				</div>
+				</div>
+		  
+			</div>
+		</div>
+		<div class="form-group">
+		<div class="col-md-12">
+			<label class="h6" for="clientType">Lloji i klientit:</label>
+			<select name="clientType" class="form-control"  id="clientType">
+				<option>Klient1</option>
+			</select>
+	  </div>
+	  </div>
+	 <div class="d-flex justify-content-center ">
+	<input name="searchbill" type="submit" class="btn btn-primary  btn-lg w-50 p-2" value="Regjistro" >
+	</div>
+	
+	</form>
+  </div>
+</div>
+
+
+
+
+	
