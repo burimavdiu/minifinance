@@ -2,10 +2,9 @@
 function addUser($firstname,$lastname,$dep_id,$password,$email,$username,$phone,$registrar_id){
 	global $dbconn;
 	$query_add_user="INSERT INTO users(firstname,lastname,dep_id,password,email,username,phone,reg_id) VALUES('$firstname','$lastname', $dep_id,'$password','$email','$username','$phone', $registrar_id)";
-	$result_add_user=mysqli_query($dbconn, $query_add_user);
-	if(!$result_add_user){
+	$result_add_user=mysqli_query($dbconn, $query_add_user) or 
 		die("<span class='text-danger'>Gabim gjat shtimit te perdoruesit" . mysqli_error($dbconn)."</span>");
-	}	
+		
 }
 function addClient($client,$contactPerson,$position,$firstAddress,$secondAddress,$city,$state,$zip,$phone,$mobPhone,
 $email,$web,$clientRegistrationNo,$fiscalNo,$vatNo,$clientType,$registrar_id,$date){
