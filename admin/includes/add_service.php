@@ -1,4 +1,3 @@
-
 	<?php
 		/*if(isset($_POST['addUser'])){
 			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],$_POST['departments'],$_POST['password'],$_POST['email'],$_POST['username'],$_POST['phone']);
@@ -18,7 +17,8 @@
     <div class="card  mx-auto mt-30">
       <div class="card-header h4">Regjistrimi i shërbimit</div>
       <div class="card-body">
-        <form method="post">		  
+        <form method="post">	
+		<h5 class="alert alert-info">Të dhënat për regjistrimin e shërbimit:</h5>
 		  <div class="form-group">
             <div class="form-row">
                 <label class="h6"" for="servicename">Emri i shërbimit: </label>

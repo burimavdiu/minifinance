@@ -55,11 +55,14 @@ body.fixed-nav {
 .teksti {
 	 font-weight: bold;
 }
+<<<<<<< HEAD
 
 .buton{
 	margin:45%;
 }
 
+=======
+>>>>>>> 498dffe610e3efe082204231df405444d2983dac
 #mainNav .navbar-collapse {
   overflow: auto;
   max-height: 75vh; }

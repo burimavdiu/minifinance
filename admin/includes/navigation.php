@@ -11,7 +11,7 @@
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Clients">
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Klient">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseClients" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">Klientët</span>
@@ -25,7 +25,7 @@
             </li>
           </ul>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="company">
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kompanit">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseCompany" data-parent="#exampleAccordion">
            <i class="fa fa-building" aria-hidden="true"></i>
             <span class="nav-link-text">Kompanit</span>
@@ -39,7 +39,7 @@
             </li>
           </ul>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Users">
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Përdoruesit">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseUsers" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">Përdoruesit</span>
@@ -53,10 +53,11 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="services">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Shërbimet">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseServices" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
             <span class="nav-link-text">Shërbimet</span>
+
           </a>
           <ul class="sidenav-second-level collapse" id="collapseServices">
             <li>
@@ -67,19 +68,21 @@
             </li>
           </ul>
         </li>
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="searchbill">
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kërko raportin">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#searchbill" data-parent="#exampleAccordion">
           <i class="fa fa-list" aria-hidden="true"></i>
             <span class="nav-link-text">Kërko raportin</span>
+
           </a>
           <ul class="sidenav-second-level collapse" id="searchbill">
             <li>
+
               <a href="searchfatura.php?source=search_bill">Kërko raportin</a>
             </li>
           </ul>
         </li>
 
-		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="addbill">
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Fatura">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#addbill" data-parent="#exampleAccordion">
           <i class="fa fa-google-wallet" aria-hidden="true"></i>
             <span class="nav-link-text">Fatura</span>

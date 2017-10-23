@@ -23,6 +23,15 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
+	   <?php
+                session_start();
+                if (isset($_SESSION["login_error"])) {
+                    echo "<p id='message' class='alert alert-danger text-danger'>Username ose Password janë gabim</p>";
+                    unset($_SESSION['login_error']);
+                } else {
+                    echo "<p id='message' class='alert alert-danger text-danger sr-only'></p>";
+                }
+            ?>
         <form id="loginform" method="post" action="includes/login.php">
           <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
@@ -38,15 +47,7 @@
                 <input class="form-check-input" type="checkbox"> Remember Password</label>
             </div>
           </div>
-            <?php
-                session_start();
-                if (isset($_SESSION["login_error"])) {
-                    echo "<p id='message' class='alert alert-danger text-danger'>Username ose Password janë gabim</p>";
-                    unset($_SESSION['login_error']);
-                } else {
-                    echo "<p id='message' class='alert alert-danger text-danger' style='display: none'></p>";//inline style
-                }
-            ?>
+           
           <input name="login" type="submit" class="btn btn-primary btn-block" value="Login" />
         </form>
         <div class="text-center">

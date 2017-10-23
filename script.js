@@ -15,8 +15,10 @@ $(document).ready(function() {
             message += "Shtypni password";
             result = false;
         }
-        $("#message").css("display", "block");// ndryshimi i style-it
-        $("#message").html(message);
+        if (!result) {
+            $("#message").html(message);
+            $("#message").removeClass("sr-only").addClass("show");
+        }
         return result;
     });
 });

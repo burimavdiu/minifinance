@@ -1,4 +1,5 @@
 
+
 	<?php
 		if(isset($_POST['addClient'])){
 			$mesazhi=addClient($_POST['client'],$_POST['contactPerson'],$_POST['position'],
@@ -127,23 +128,49 @@
 		  
 			</div>
 		</div>
-		<div class="form-group">
-		<div class="col-md-12">
-			<label class="h6" for="clientType">Lloji i klientit:</label>
-			<select name="clientType" class="form-control"  id="clientType">
-				<option>Klient1</option>
-			</select>
-	  </div>
-	  </div>
-	 <div class="d-flex justify-content-center ">
-	<input name="searchbill" type="submit" class="btn btn-primary  btn-lg w-50 p-2" value="Regjistro" >
-	</div>
-	
+		  <div class="form-group">
+		<div class="form-row">
+		  <div class="col-md-6">
+		  <div class="col-md-12">
+			<label  class="h6" for="registrar">Regjistroi:</label>
+			<input name="registrar" class="form-control" id="registrar" type="text">
+		  </div>
+		  </div>
+		  <div class="col-md-6">
+		  <div class="col-md-12">
+			<label class="h6" for="date">Koha e regjistrimit:</label>
+			<input name="date" class="form-control" id="date" type="date">
+		  </div>
+		</div>
+		</div>
+		</div>
+	  <input name="addClient" type="submit" class="btn btn-primary btn-block" value="Regjistro">
 	</form>
   </div>
 </div>
+		
+		
+		
+		
+
+<?php
+	if(isset($_POST['addClient'])){
+		$registrar=$_SESSION['user']['user_id'];
+		$mesazhi=addClient($_POST['client'],$_POST['contactPerson'],$_POST['position'],
+		$_POST['firstAddress'],$_POST['secondAddress'],$_POST['city'],
+		$_POST['state'],$_POST['zip'],$_POST['phone'],$_POST['mobPhone'],
+		$_POST['email'],$_POST['web'],$_POST['clientRegistrationNo'],
+		$_POST['fiscalNo'],$_POST['vatNo'],$_POST['clientType'],$registrar,
+		$_POST['date']);
+		echo "<p class='text-success'>".$mesazhi."</p>";
+	}
+?>
+
 
 
 
 
 	
+
+	
+

@@ -1,16 +1,24 @@
 
 	<?php
 		if(isset($_POST['addUser'])){
+
 			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],
 			$_POST['departments'],$_POST['password'],$_POST['email'],
 			$_POST['username'],$_POST['phone'], 1);// 1 ne vend te id te regjistruesit apo administratorit
+
+            $registrar=$_SESSION['user']['user_id'];
+			$mesazhi=addUser($_POST['firstname'],$_POST['lastname'],
+			$_POST['departments'],$_POST['password'],$_POST['email'],
+			$_POST['username'],$_POST['phone'],$registrar);
 			echo $mesazhi;
 		}
 	?><!-- card-register forma e regjistrimit--> 
     <div class="card  mx-auto mt-30">
       <div class="card-header h4">Regjistrimi i Përdoruesit</div>
       <div class="card-body">
-        <form method="post">		  
+        <form method="post">	
+		<h5 class="alert alert-info">Të dhënat për regjistrimin e përdoruesit:</h5>
+		<hr>
 		  <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
@@ -24,6 +32,7 @@
             </div>
           </div>
             <div class="form-group">
+
             <label class="h6" for="department">Departamenti :</label>
             <?php
                 echo '<select name="departments" class="form-control"  id="department">';

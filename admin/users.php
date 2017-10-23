@@ -5,6 +5,7 @@
         header("Location: ../index.php");
     }
 ?>
+
   <!-- Navigation-->
   <?php include "includes/navigation.php";?>
 	<div class="content-wrapper">

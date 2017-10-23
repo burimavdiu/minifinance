@@ -29,12 +29,11 @@
                 </tr>
               </tfoot>
               <tbody>
-              <?php
+				<?php
 				$users=findUsers();
 				while($user=mysqli_fetch_array($users)){
 				$user_id=$user['user_id'];
 				echo "<tr>";
-				
 				echo "<td>".  $user['firstname'] . "</td>";
 				echo "<td>".  $user['lastname'] . "</td>";
 				echo "<td>".  $user['email'] . "</td>";
@@ -43,9 +42,8 @@
 				echo "<td><a href='users.php?source=edit_user&user_id=$user_id'>Edit</a></td>";
 				echo "<td><a href='users.php?delete=$user_id'>Delete</a></td>";
 				echo "</tr>";
-			}
+				}
 			  ?>
-               
               </tbody>
             </table>
           </div>
