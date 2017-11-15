@@ -35,7 +35,7 @@
         <form id="loginform" method="post" action="includes/login.php">
           <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
-            <input name="username" class="form-control" id="exampleInputUsername1" type="text" aria-describedby="userHelp" placeholder="Enter username">
+            <input name="username" class="form-control" id="exampleInputUsername1" type="text" aria-describedby="userHelp" placeholder="Enter username" autofocus>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>

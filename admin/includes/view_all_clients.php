@@ -7,48 +7,44 @@
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>Client Name</th>
-              <th>Contact Person</th>
-              <th>Job Position</th>
-              <th>Address 1</th>
-              <th>Address 2</th>
-              <th>City</th>
-              <th>State</th>
-              <th>Zip</th>
-              <th>Mobile no.</th>
-              <th>Tel no.</th>
-              <th>Client email</th>
-              <th>Client web</th>
-              <th>Business register no.</th>
-              <th>Fiscal no.</th>
-              <th>Vat no.</th>
-              <th>Client type</th>
-              <th>User id</th>
-              <th>Registration date</th>
+              <th>Klienti</th>
+              <th>Përsoni kontaktues</th>
+              <th>Pozita(Titulli)</th>
+              <th>Adresa</th>
+              <th>Qyteti</th>
+              <th>Shteti</th>
+              <th>Telofoni i punës</th>
+              <th>Telofoni mobil</th>
+              <th>Email</th>
+              <th>Web Faqja</th>
+              <th>Nr. Regjistrimit të Klientit</th>
+              <th>Nr. Fiskal</th>
+              <th>Nr. TVSH</th>
+              <th>Lloji i klientit</th>
+              <th>Regjistroi</th>
+              <th>Koha e regjistrimit</th>
               <th>Edit</th>
               <th>Delete</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <th>Client Name</th>
-              <th>Contact Person</th>
-              <th>Job Position</th>
-              <th>Address 1</th>
-              <th>Address 2</th>
-              <th>City</th>
-              <th>State</th>
-              <th>Zip</th>
-              <th>Mobile no.</th>
-              <th>Tel no.</th>
-              <th>Client email</th>
-              <th>Client web</th>
-              <th>Business register no.</th>
-              <th>Fiscal no.</th>
-              <th>Vat no.</th>
-              <th>Client type</th>
-              <th>User id</th>
-              <th>Registration date</th>
+              <th>Klienti</th>
+              <th>Përsoni kontaktues</th>
+              <th>Pozita(Titulli)</th>
+              <th>Adresa</th>
+              <th>Qyteti</th>
+              <th>Shteti</th>
+              <th>Telofoni i punës</th>
+              <th>Telofoni mobil</th>
+              <th>Email</th>
+              <th>Web Faqja</th>
+              <th>Nr. Regjistrimit të Klientit</th>
+              <th>Nr. Fiskal</th>
+              <th>Nr. TVSH</th>
+              <th>Lloji i klientit</th>
+              <th>Regjistroi</th>
+              <th>Koha e regjistrimit</th>
               <th>Edit</th>
               <th>Delete</th>
             </tr>
@@ -63,10 +59,8 @@
                 echo "<td>".  $client['contact_person'] . "</td>";
                 echo "<td>".  $client['job_position'] . "</td>";
                 echo "<td>".  $client['address_1'] . "</td>";
-                echo "<td>".  $client['address_2'] . "</td>";
                 echo "<td>".  $client['city'] . "</td>";
                 echo "<td>".  $client['state'] . "</td>";
-                echo "<td>".  $client['zip'] . "</td>";
                 echo "<td>".  $client['mobile_no'] . "</td>";
                 echo "<td>".  $client['tel_no'] . "</td>";
                 echo "<td>".  $client['client_email'] . "</td>";

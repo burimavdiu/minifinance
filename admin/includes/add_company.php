@@ -128,8 +128,26 @@
 				</div>
 			</div>
 		</div>
-		
-	  <input name="addClient" type="submit" class="btn btn-primary btn-block" value="Regjistro" >
+		<hr>
+		<div class="form-group">
+				<div class="row">
+					<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12">
+							<input name="addCompany" type="submit" class="btn btn-primary btn-default btn-block" value="Regjistro" >
+						</div>
+					</div>
+					</div>
+				<div class="col-md-6">
+					<div class="row mt-3 mt-md-0">
+						<div class="col-md-12">
+						<input name="reset" type="reset" class="btn btn-outline-secondary btn-default btn-block"  value="Fshij">
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+	  
 	</form>
   </div>
 </div>

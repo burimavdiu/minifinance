@@ -13,62 +13,103 @@
 			echo $mesazhi;
 		}
 	?><!-- card-register forma e regjistrimit--> 
-    <div class="card  mx-auto mt-30">
-      <div class="card-header h4">Regjistrimi i Përdoruesit</div>
-      <div class="card-body">
-        <form method="post">	
-		<h5 class="alert alert-info">Të dhënat për regjistrimin e përdoruesit:</h5>
+<div class="card  mx-auto mt-30">
+	<div class="card-header h4">Regjistrimi i Përdoruesit</div>
+		<div class="card-body">
+			<form method="post">	
+			<h5 class="alert alert-info">Të dhënat për regjistrimin e përdoruesit:</h5>
+			<hr>
+				<div class="form-group">
+				<div class="form-row">
+					<div class="col-md-6">
+					<div class="col-md-12">
+						<label class="h6" for="firstname">Emri: </label>
+						<input name="firstname" class="form-control" id="firstname" type="text" aria-describedby="nameHelp"  autofocus>
+					</div>
+					</div>
+					<div class="col-md-6">
+					<div class="col-md-12">
+						<label class="h6" for="lastname">Mbiemri: </label>
+						<input name="lastname" class="form-control" id="lastname" type="text" aria-describedby="nameHelp">
+					</div>
+					</div>
+				</div>
+				</div>
+				<div class="form-group">
+					<div class="form-row">
+						<div class="col-md-6">
+						<div class="col-md-12">
+						<label class="h6" for="department">Departamenti :</label>
+							<?php
+								echo '<select name="departments" class="form-control"  id="department">';
+								$departments=findDepartments();
+								
+								while($dep=mysqli_fetch_array($departments)){
+									echo "<option value='".$dep['dep_id']."'> ".$dep['dep_name']. "</option>";
+								}
+								echo '</select>';
+							?>
+					</div>
+					</div>
+						<div class="col-md-6">
+						<div class="col-md-12">
+							<label class="h6" for="email">Email :</label>
+							<input name="email" class="form-control" id="email" type="email" aria-describedby="emailHelp" >
+						</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="form-row">
+						<div class="col-md-6">
+						<div class="col-md-12">
+							<label class="h6" for="phone">Telefoni :</label>
+							<input name="phone" class="form-control" id="phone" type="text" aria-describedby="telefoniHelp" >
+						</div>
+						</div>
+						<div class="col-md-6">
+						<div class="col-md-12">
+							<label class="h6" for="username">Përdoruesi :</label>
+							<input name="username" class="form-control" id="username" type="text" aria-describedby="perdoruesiHelp" >
+						</div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="form-row">
+						<div class="col-md-6">
+						<div class="col-md-12">
+								<label class="h6" for="password">Fjalëkalimi :</label>
+								<input name="password" class="form-control" id="password" type="password">
+						</div>
+						</div>
+						<div class="col-md-6">
+						<div class="col-md-12">
+							<label class="h6" for="confirmPassword">Konfirmo Fjalëkalimin :</label>
+							<input class="form-control" id="confirmPassword" type="password">
+						</div>
+						</div>
+					</div>
+				</div>
 		<hr>
-		  <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <label class="h6" for="firstname">Emri: </label>
-                <input name="firstname" class="form-control" id="firstname" type="text" aria-describedby="nameHelp"  autofocus>
-              </div>
-              <div class="col-md-6">
-                <label class="h6" for="lastname">Mbiemri: </label>
-                <input name="lastname" class="form-control" id="lastname" type="text" aria-describedby="nameHelp">
-              </div>
-            </div>
-          </div>
-            <div class="form-group">
-
-            <label class="h6" for="department">Departamenti :</label>
-            <?php
-                echo '<select name="departments" class="form-control"  id="department">';
-				$departments=findDepartments();
-				
-                while($dep=mysqli_fetch_array($departments)){
-                    echo "<option value='".$dep['dep_id']."'> ".$dep['dep_name']. "</option>";
-                }
-                echo '</select>';
-            ?>
-          </div>
-          <div class="form-group">
-            <label class="h6" for="email">Email :</label>
-            <input name="email" class="form-control" id="email" type="email" aria-describedby="emailHelp" >
-          </div>
-		  <div class="form-group">
-            <label class="h6" for="phone">Telefoni :</label>
-            <input name="phone" class="form-control" id="phone" type="text" aria-describedby="telefoniHelp" >
-          </div>
-		   <div class="form-group">
-            <label class="h6" for="username">Përdoruesi :</label>
-            <input name="username" class="form-control" id="username" type="text" aria-describedby="perdoruesiHelp" >
-          </div>
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <label class="h6" for="password">Fjalëkalimi :</label>
-                <input name="password" class="form-control" id="password" type="password">
-              </div>
-              <div class="col-md-6">
-                <label class="h6" for="confirmPassword">Konfirmo Fjalëkalimin :</label>
-                <input class="form-control" id="confirmPassword" type="password">
-              </div>
-            </div>
-            </div>
-		  <input name="addUser" type="submit" class="btn btn-primary btn-block" value="Regjistro">
+				<div class="form-group">
+					<div class="row">
+						<div class="col-md-6">
+						<div class="row">
+						<div class="col-md-12">
+							<input name="addUser" type="submit" class="btn btn-primary btn-default btn-block" value="Regjistro">
+						</div>
+						</div>
+						</div>
+						<div class="col-md-6">
+						<div class="row mt-3 mt-md-0">
+						<div class="col-md-12">
+							<input name="reset" type="reset" class="btn btn-outline-secondary btn-default btn-block"  value="Fshij">
+						</div>
+						</div>
+						</div>
+					</div>
+				</div>
         </form>
-      </div>
-    </div>
+		</div>
+</div>

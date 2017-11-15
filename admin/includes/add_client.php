@@ -29,7 +29,7 @@
 				</div>
 			<div class="col-md-6">
 			<div class="col-md-12">
-					<label class="h6" for="contactPerson">Kontakt personi: </label>
+					<label class="h6" for="contactPerson">Përsoni kontaktues: </label>
 					<input name="contactPerson" class="form-control" id="contactPerson" type="text" aria-describedby="contactPersonHelp" required>
               </div>
 			  </div>
@@ -72,7 +72,7 @@
             <div class="form-row">
 				<div class="col-md-6">
 				<div class="col-md-12">
-					<label class="h6" for="phone">Telofoni i punes:</label>
+					<label class="h6" for="phone">Telofoni i punës:</label>
 					<input name="phone" class="form-control" id="phone" type="phone">
 				</div>
 				</div>
@@ -130,21 +130,74 @@
 		</div>
 		  <div class="form-group">
 		<div class="form-row">
-		  <div class="col-md-6">
+		<div class="col-md-4">
+		<div class="col-md-12">
+				<label class="h6" for="clientType">Lloji i klientit:</label>
+				<select name="clientType" class="form-control"  id="clientType">
+					<option>I rregullt</option>
+					<option>I rregullt</option>
+					<option>I rregullt</option>
+				</select>
+				<!--<div class="form-group">
+				<div class="form-row">
+					<div class="col-md-4">
+					<div class="col-md-12">
+					<label for="department">Departamenti</label>
+					<?php
+					  /*  echo '<select name="departments" class="form-control"  id="department">';
+						$departments=findDepartments();
+						
+						while($dep=mysqli_fetch_array($departments)){
+							echo "<option value='".$dep['dep_id']."'> ". $dep['dep_name']. "</option>";
+						}
+						echo '</select>';
+					*/?>
+					</div>
+					</div>
+				  </div>-->
+				
+				
+				
+			</div>
+			</div>
+		  <div class="col-md-4">
 		  <div class="col-md-12">
 			<label  class="h6" for="registrar">Regjistroi:</label>
 			<input name="registrar" class="form-control" id="registrar" type="text">
 		  </div>
 		  </div>
-		  <div class="col-md-6">
+		  <div class="col-md-4">
 		  <div class="col-md-12">
 			<label class="h6" for="date">Koha e regjistrimit:</label>
 			<input name="date" class="form-control" id="date" type="date">
 		  </div>
 		</div>
+		
 		</div>
 		</div>
-	  <input name="addClient" type="submit" class="btn btn-primary btn-block" value="Regjistro">
+		<hr>
+		<div class="form-group">
+				<div class="row">
+					<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12">
+							<input name="addClient" type="submit" class="btn btn-primary btn-default btn-block" value="Regjistro">
+						</div>
+					</div>
+					</div>
+				<div class="col-md-6">
+					<div class="row mt-3 mt-md-0">
+						<div class="col-md-12">
+						<input name="reset" type="reset" class="btn btn-outline-secondary btn-default btn-block"  value="Fshij">
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		
+		
+		
+	  
 	</form>
   </div>
 </div>

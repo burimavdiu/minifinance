@@ -2,28 +2,30 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-           <i class="fa fa-fw fa-users"></i> Lista me të gjithë përdoruesit</div>
+           <i class="fa fa-fw fa-users"></i> Lista e të gjithë përdoruesëve</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
+                  <th>Emri</th>
+				  <th>Mbiemri</th>
+                  <th>Departamenti</th>
+                  <th>Email</th>
+                  <th>Telefoni</th>
+                  <th>Përdoruesi</th>
                   <th>Edit</th>
 				  <th>Delete</th>
                 </tr>
               </thead>
               <tfoot>
                 <tr>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Age</th>
-                  <th>Start date</th>
+                  <th>Emri</th>
+				  <th>Mbiemri</th>
+                  <th>Departamenti</th>
+                  <th>Email</th>
+                  <th>Telefoni</th>
+                  <th>Përdoruesi</th>
                   <th>Edit</th>
 				  <th>Delete</th>
                 </tr>
@@ -36,6 +38,7 @@
 				echo "<tr>";
 				echo "<td>".  $user['firstname'] . "</td>";
 				echo "<td>".  $user['lastname'] . "</td>";
+				echo "<td>".  $user['dep_id'] . "</td>";//departamenti
 				echo "<td>".  $user['email'] . "</td>";
 				echo "<td>".  $user['phone'] . "</td>";
 				echo "<td>".  $user['username'] . "</td>";

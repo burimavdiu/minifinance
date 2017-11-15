@@ -98,14 +98,37 @@
 			</div>
 		</div>
 	</div>
+	
+	<!--
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12">
+							<input name="searchbill" type="submit" class="btn btn-primary btn-default btn-block" value="Kërko">
+						</div>
+					</div>
+					</div>
+				<div class="col-md-6">
+					<div class="row mt-3 mt-sm-0">
+						<div class="col-md-12">
+						<input name="reset" type="reset" class="btn btn-outline-secondary btn-default btn-block"  value="Fshij">
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			-->
+	
+	
 	<div class="d-flex justify-content-center ">
-	<input name="searchbill" type="submit" class="btn btn-primary  btn-lg w-50 p-2" value="Kërko" >
+	<input name="searchbill" type="submit" class="btn btn-primary  btn-default w-50 p-2" value="Kërko" >
 	</div>
-
+	
 </form>
 </div>
 </div>
-<hr>
+<br>
   <!-- Example DataTables Card-->
   <div class="card mb-3">
     <div class="card-header">

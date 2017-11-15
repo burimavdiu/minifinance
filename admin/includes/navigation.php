@@ -96,6 +96,20 @@
             </li>
           </ul>
         </li>
+		
+		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Shitja">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#shitja" data-parent="#exampleAccordion">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span class="nav-link-text">Shto/Ndrysho shitje</span>
+
+          </a>
+          <ul class="sidenav-second-level collapse" id="shitja">
+            <li>
+
+              <a href="sales.php?source=add_sale">Shto/Ndrysho shitje</a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
           <a class="nav-link" href="charts.html">
             <i class="fa fa-fw fa-area-chart"></i>
